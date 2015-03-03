@@ -27,6 +27,10 @@ to register:
 * Optional for EDU users: request a discount/free upgrade by visiting
   <https://education.github.com/>
 
+If you decide you want a host that allows for free private projects,
+I recommend [Bitbucket](https://bitbucket.org/) as an alternative.
+(Actually, I use both for various projects.)
+
 ### Cloud9
 
 Setting up Ruby and Ruby on Rails to work on your personal computer
@@ -52,4 +56,76 @@ hosted at `https://app-name.herokuapp.com`.
 * Confirm your account by clicking the link sent to your email.
 * Create a password. Your username is your email address.
 
+
+## Installing Rails in Your Cloud9 Environment
+
+Since we'll be coding in Cloud9, let's set our workspace using
+the instructions at
+<https://www.railstutorial.org/book/beginning#sec-up_and_running>
+(section 1.2). This will walk you through doing the following:
+
+* Setting up a Cloud9 workspace for the tutorial
+* Installing the Ruby on Rails framework using RubyGems.
+
+By the way, RubyGems is the package manager which allows Rubyists to
+easily install and use Ruby libraries which will keep you from
+reinventing the wheel.
+
+
+## Hello World!
+
+Section 1.3
+<https://www.railstutorial.org/book/beginning#sec-the_hello_application>
+fulfills the time-honored tradition of getting a new language to display
+"Hello World!":
+
+* Using the `rails` command to scaffold a new application
+* Using Bundler to manage your RubyGems
+* Using the `rails server` command to host a local application
+* Overviewing the Model-View-Controller (MVC) web development pattern
+
+
+## Version Control with Git
+
+You've got to get Git. Git is a distributed version control system which
+will allow us to do the following (and more):
+
+* Track changes as we edit code
+* Back up our code on GitHub.com
+* Provide sane workflows for collaborating with multiple people
+  on the same code
+* Easily allow us to push our application to the live internet
+
+Follow Section 1.4 through 1.4.2 at
+<https://www.railstutorial.org/book/beginning#sec-version_control>
+to get started on:
+
+* Installing Git
+* Setting up a Git-tracked project
+
+We will use GitHub instead of Bitbucket to host our git repo(sitory)
+since it's more popular for hosting many of the libraries you'll use
+as a Ruby programmer. *That said, the tutorial makes a good argument for using
+Bitbucket, so you could use that instead if you'd prefer by following
+[1.4.3](https://www.railstutorial.org/book/beginning#sec-bitbucket).*
+
+We'll start by wiring up Cloud9 to securely talk with GitHub using
+[SSH](http://en.wikipedia.org/wiki/Secure_Shell).
+
+* Run `cat ~/.ssh/id_rsa.pub` to display your
+  [public key](https://en.wikipedia.org/wiki/Public-key_cryptography).
+  Copy it to your clipboard.
+* Visit <https://github.com/settings/ssh> while logged into GitHub
+  and click "Add SSH key".
+* Use the label "Cloud9" (or whatever) and paste your public key into
+  the field. Click "Add key".
+
+Next we'll set up a repository on GitHub to store our code.
+
+* Click the plus (+) sign in the top menu and click "New Repository".
+* Name it `rails-tutorial`. Do NOT initialize the project with a README.
+* Run the following code in Cloud9 to push your project to GitHub:
+    ```
+    foo
+    ```
 
