@@ -112,7 +112,7 @@ Bitbucket, so you could use that instead if you'd prefer by following
 We'll start by wiring up Cloud9 to securely talk with GitHub using
 [SSH](http://en.wikipedia.org/wiki/Secure_Shell).
 
-* Run `cat ~/.ssh/id_rsa.pub` to display your
+* Run `cat ~/.ssh/id_rsa.pub` in Cloud9 to display its
   [public key](https://en.wikipedia.org/wiki/Public-key_cryptography).
   Copy it to your clipboard.
 * Visit <https://github.com/settings/ssh> while logged into GitHub
@@ -120,12 +120,47 @@ We'll start by wiring up Cloud9 to securely talk with GitHub using
 * Use the label "Cloud9" (or whatever) and paste your public key into
   the field. Click "Add key".
 
-Next we'll set up a repository on GitHub to store our code.
+Next we'll set up a repository on GitHub and push the code we've written
+to it.
 
 * Click the plus (+) sign in the top menu and click "New Repository".
-* Name it `rails-tutorial`. Do NOT initialize the project with a README.
-* Run the following code in Cloud9 to push your project to GitHub:
+* Name it `rails-tutorial`. Do *not* initialize the project with a README!
+* Toggle from "HTTPS" to choose "SSH" instead.
+* Copy-paste the "...or push an existing repository from the command line"
+  code shown on that page into the Cloud9 terminal. Something like:
     ```
-    foo
+    git remote add origin git@github.com:<username>/rails-tutorial.git
+    git push -u origin master
     ```
+* Type "yes" and hit Enter if it asks if you wish to continue connecting.
 
+Visit your repository page on GitHub and you should see a copy of your
+code there!
+
+Return to Hartl's tutorial for Section 1.4.4
+<https://www.railstutorial.org/book/beginning#sec-git_commands>
+to learn about a suggested Git workflow.
+
+
+## To the Internet!
+
+Our final step for today is to use Git and Heroku to put your web
+application on the internet. Follow Section 1.5
+<https://www.railstutorial.org/book/beginning#sec-deploying> on
+Deploying to learn how to get your app hosted at
+`https://some-app-domain.herokuapp.com`.
+
+
+## Next Steps
+
+If you'd like to keep learning on your own, check out Hartl's
+recommended Exercises in section 1.7
+<https://www.railstutorial.org/book/beginning#sec-beginning_exercises>.
+
+Or, you can continue working with Rails by working through Chapter 2,
+which will walk you through making a mini-[Twitter](https://twitter.com):
+<https://www.railstutorial.org/book/toy_app>
+
+Interested in a workshop to work through more of this tutorial?
+Let us know at <http://www.meetup.com/aubrug> or email Steven at
+<steven.clontz@gmail.com>.
