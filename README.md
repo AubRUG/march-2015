@@ -128,10 +128,12 @@ to it.
 * Toggle from "HTTPS" to choose "SSH" instead.
 * Copy-paste the "...or push an existing repository from the command line"
   code shown on that page into the Cloud9 terminal. Something like:
-    ```
-    git remote add origin git@github.com:<username>/rails-tutorial.git
-    git push -u origin master
-    ```
+
+```shell
+git remote add origin git@github.com:<username>/rails-tutorial.git
+git push -u origin master
+```
+
 * Type "yes" and hit Enter if it asks if you wish to continue connecting.
 
 Visit your repository page on GitHub and you should see a copy of your
